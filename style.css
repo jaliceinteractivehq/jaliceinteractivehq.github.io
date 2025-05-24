@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'AmityJack';
+  src: url('fonts/AmityJack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.company-name {
+  font-family: 'AmityJack', serif;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
