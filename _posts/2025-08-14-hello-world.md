@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World!"
 date: 2025-08-14 00:00:00 +0000
+image: /assets/images/hello-world.png
 ---
 
 Welcome to our game studio, JAlice Interactive.

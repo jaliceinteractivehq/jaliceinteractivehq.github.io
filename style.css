@@ -260,3 +260,60 @@ button:hover, .btn:hover { background: #444; }
 @media (max-width: 768px) {
   .game-detail { grid-template-columns: 1fr; }
 }
+
+/* ===== BLOG PAGE ===== */
+.blog-section {
+  padding: 5vw 3vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-section h1 { margin-bottom: 3rem; }
+
+.post-excerpt {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+/* ===== POST DETAIL PAGE ===== */
+.post-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5vw 3vw;
+}
+
+.post-header { margin-bottom: 3rem; }
+.post-header h1 { margin-bottom: 0.5rem; }
+
+.post-content { line-height: 1.8; }
+.post-content p { margin-bottom: 1.5rem; }
+
+.post-back {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.post-back a:hover { opacity: 0.4; }
+
+/* ===== POST BODY WITH IMAGE ===== */
+.post-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .post-body { grid-template-columns: 1fr; }
+}
