@@ -26,6 +26,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jaliceinteractivehq.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: JAlice_ltd
 github_username:  jaliceinteractivehq
+collections:
+  games:
+    output: true
+    permalink: /games/:name
 
 # Build settings
 theme: minima

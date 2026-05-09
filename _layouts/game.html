@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<section class="game-detail">
+  <div class="game-detail-cover">
+    <img src="{{ page.cover }}" alt="{{ page.title }}">
+  </div>
+  <div class="game-detail-info">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <a href="{{ page.play_url }}" target="_blank"><button>Play Now</button></a>
+    <div class="game-detail-content">
+      {{ content }}
+    </div>
+  </div>
+</section>
