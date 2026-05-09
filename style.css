@@ -282,7 +282,7 @@ button:hover, .btn:hover { background: #444; }
 /* ===== BLOG PAGE ===== */
 .blog-section {
   padding: 5vw 3vw;
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -344,7 +344,7 @@ button:hover, .btn:hover { background: #444; }
 
 /* ===== POST DETAIL PAGE ===== */
 .post-detail {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 5vw 3vw;
 }
@@ -354,6 +354,25 @@ button:hover, .btn:hover { background: #444; }
 
 .post-content { line-height: 1.8; }
 .post-content p { margin-bottom: 1.5rem; }
+
+/* ===== POST NAVIGATION ===== */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+  gap: 1rem;
+}
+
+.post-nav-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.post-nav-btn:hover { opacity: 1; }
 
 .post-back {
   margin-top: 4rem;

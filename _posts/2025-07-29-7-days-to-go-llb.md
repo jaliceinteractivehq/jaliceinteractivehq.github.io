@@ -2,6 +2,7 @@
 layout: post
 title: "🎮7 Days to Go: Levantar La Botella"
 date: 2025-07-29 00:00:00 +0000
+image: /assets/images/7-days-to-go-llb-preivew.png
 preview_image: /assets/images/7-days-to-go-llb-preivew.png
 ---
 
