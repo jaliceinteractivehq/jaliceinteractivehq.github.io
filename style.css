@@ -1,24 +1,121 @@
-@font-face {
-  font-family: 'AmityJack';
-  src: url('fonts/AmityJack.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.company-name {
-  font-family: 'AmityJack', serif;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
+body {
+  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
-  cursor: pointer;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.6;
 }
 
-button:hover {
-  background-color: #0056b3;
+a { color: inherit; text-decoration: none; }
+
+/* ===== HEADER ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 3vw;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 150px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.header-nav { display: flex; gap: 2rem; }
+.header-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.header-nav a:hover { opacity: 1; }
+
+.header-logo img {
+  height: 70px;
+  display: block;
+}
+
+.header-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-social a { opacity: 0.6; transition: opacity 0.2s; }
+.header-social a:hover { opacity: 1; }
+.header-social svg { fill: #1a1a1a; display: block; width: 64px; height: 64px;}
+
+/* ===== MAIN CONTENT ===== */
+main { min-height: 70vh; }
+
+section {
+  padding: 5vw 3vw;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: clamp(1.2rem, 2.5vw, 2rem); font-weight: 500; margin-bottom: 1.5rem; }
+p  { margin-bottom: 1rem; opacity: 0.8; }
+
+/* ===== GAMES LIST ===== */
+ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+ul li a {
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.25rem;
+  transition: border-color 0.2s;
+}
+ul li a:hover { border-color: #1a1a1a; }
+
+/* ===== BUTTON ===== */
+button, .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover { background: #444; }
+
+/* ===== BLOG LIST ===== */
+.post-list { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+.post-list li { border-bottom: 1px solid #f0f0f0; padding-bottom: 1.5rem; }
+.post-list a { font-size: 1.2rem; font-weight: 600; }
+.post-list a:hover { opacity: 0.6; }
+.post-date { font-size: 0.85rem; opacity: 0.5; margin-top: 0.25rem; }
+
+/* ===== FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: 2rem 3vw;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-inner { grid-template-columns: 1fr auto; }
+  .header-nav { display: none; }
+  .header-social { display: none; }
 }

@@ -1,48 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>JALICE INTERACTIVE</title>
-</head>
-<body>
-  <header>
-    <h1>Welcome to <span class="company-name"> JAlice Interactive</span></h1>
-    <p>Relax and enjoy the Gaming Experience</p>
-  </header>
+---
+layout: default
+title: Home
+---
 
-  <section>
-    <h2 >At <span class="company-name"> JAlice Interactive</span>, we’re all about creating fun, light-hearted, and independent video games that spark joy and bring people together. 
-      Whether you're diving into a quirky adventure or just looking to unwind, our games are designed to help you relax and enjoy the gaming experience.</h2>
-    <h2>Our GAMES</h2>
-    <ul>
-      <li><a href="https://jalice-interactive.itch.io/levantar-la-botella" target="_blank">Levantar La Botella</a></li>
-      <li>GAME Two</li>
-      <li>GAME Three</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h1>Welcome to <span class="company-name">JAlice Interactive</span></h1>
+  <p>Relax and enjoy the Gaming Experience</p>
+</section>
 
-  <a href="get-to-know-us.html">
-      <button>Get to Know Us</button>
-  </a>
+<section>
+  <p>At JAlice Interactive, we're all about creating fun, light-hearted, and independent video games that spark joy and bring people together. Whether you're diving into a quirky adventure or just looking to unwind, our games are designed to help you relax and enjoy the gaming experience.</p>
+</section>
 
+<section>
+  <h2>Our Games</h2>
+  <ul>
+    <li><a href="https://jalice-interactive.itch.io/levantar-la-botella" target="_blank">Levantar La Botella</a></li>
+    <li>Game Two</li>
+    <li>Game Three</li>
+  </ul>
+</section>
 
+<section>
+  <a href="get-to-know-us.html"><button>Get to Know Us</button></a>
+</section>
 
-  <section>
-    <h2>Contact Us Via the google form</h2>
-    <p>Or you can fill out the form below to get in touch. We’ll respond shortly!</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctWxeLUo--cQbCYO49_2cz5aPteS6fukarmbc8lpsrHn314w/viewform?embedded=true" width="640" height="855" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </section>
+<section>
+  <h2>Latest Updates</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <p class="post-date">{{ post.date | date: "%b %d, %Y" }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-  <section>
-    <h2>Contact Us the classic way</h2>
-    <p>Email: admin@jaliceinteractive.com</p>
-    <p>Phone: </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 JALICE INTERACTIVE LTD</p>
-  </footer>
-</body>
-</html>
+<section>
+  <h2>Contact Us</h2>
+  <p>Fill out the form below to get in touch. We'll respond shortly!</p>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctWxeLUo--cQbCYO49_2cz5aPteS6fukarmbc8lpsrHn314w/viewform?embedded=true" width="640" height="855" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <p>Or email us directly: <a href="mailto:admin@jaliceinteractive.com">admin@jaliceinteractive.com</a></p>
+</section>
