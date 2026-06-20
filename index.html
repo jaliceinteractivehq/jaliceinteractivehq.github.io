@@ -54,10 +54,6 @@ title: Home
 </section>
 
 <section>
-  <a href="get-to-know-us.html"><button>Get to Know Us</button></a>
-</section>
-
-<section>
   <h2>Latest Updates</h2>
   <ul class="post-list">
     {% for post in site.posts %}
@@ -68,3 +64,35 @@ title: Home
     {% endfor %}
   </ul>
 </section>
+
+<section class="newsletter-section">
+  <h2>Subscribe to our Newsletter</h2>
+  <p>Sign up with your email address to receive news and updates.</p>
+  <div class="newsletter-form" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Email Address">
+    <button onclick="subscribeNewsletter()">Sign Up</button>
+  </div>
+  <div class="newsletter-success" id="newsletterSuccess" style="display:none">
+    <p>🎉 Thank you! You've been added to our list.</p>
+  </div>
+  <p class="newsletter-note">We respect your privacy.</p>
+</section>
+
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>
+async function subscribeNewsletter() {
+  const email = document.getElementById('newsletterEmail').value;
+  if (!email) { alert('Please enter your email!'); return; }
+  try {
+    await fetch('https://assets.mailerlite.com/jsonp/2459407/forms/190800231701415409/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `fields[email]=${encodeURIComponent(email)}&ml-submit=1&anticsrf=true`
+    });
+    document.getElementById('newsletterForm').style.display = 'none';
+    document.getElementById('newsletterSuccess').style.display = 'block';
+  } catch(e) {
+    alert('Something went wrong, please try again!');
+  }
+}
+</script>
