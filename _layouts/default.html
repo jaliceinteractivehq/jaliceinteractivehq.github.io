@@ -12,16 +12,17 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <nav class="header-nav">
-        <a href="/">Games</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <a href="/" class="header-logo">
-        <img src="/assets/images/jalice-logo.png" alt="JAlice Interactive">
-      </a>
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="header-nav">
+      <a href="/">Games</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <a href="/" class="header-logo">
+      <img src="/assets/images/jalice-logo.png" alt="JAlice Interactive">
+    </a>
+    <div class="header-right">
       <div class="header-social">
         <a href="https://discord.gg/ahKpvjDkR9" target="_blank" aria-label="Discord">
           <svg viewBox="23 23 64 64" width="24" height="24"><path d="M42.3963 22.8955C40.4842 22.0182 38.4337 21.3718 36.2899 21.0016C36.2508 20.9944 36.2118 21.0123 36.1917 21.048C35.928 21.517 35.6359 22.1289 35.4314 22.6098C33.1255 22.2646 30.8315 22.2646 28.5729 22.6098C28.3683 22.1182 28.0656 21.517 27.8007 21.048C27.7806 21.0135 27.7416 20.9956 27.7026 21.0016C25.5599 21.3706 23.5095 22.017 21.5962 22.8955C21.5796 22.9027 21.5654 22.9146 21.556 22.93C17.6667 28.7405 16.6013 34.4081 17.124 40.0055C17.1263 40.0329 17.1417 40.0591 17.163 40.0757C19.729 41.9601 22.2146 43.1041 24.6541 43.8624C24.6931 43.8743 24.7345 43.8601 24.7594 43.8279C25.3364 43.0399 25.8508 42.209 26.2918 41.3352C26.3179 41.284 26.293 41.2233 26.2398 41.203C25.4239 40.8935 24.647 40.5162 23.8997 40.0876C23.8405 40.0531 23.8358 39.9686 23.8902 39.9281C24.0475 39.8102 24.2048 39.6876 24.3549 39.5638C24.3821 39.5412 24.42 39.5364 24.4519 39.5507C29.3616 41.7923 34.6769 41.7923 39.5287 39.5507C39.5606 39.5352 39.5985 39.54 39.6268 39.5626C39.7771 39.6864 39.9343 39.8102 40.0928 39.9281C40.1472 39.9686 40.1436 40.0531 40.0845 40.0876C39.3372 40.5245 38.5602 40.8935 37.7431 41.2019C37.6899 41.2221 37.6663 41.284 37.6923 41.3352C38.1428 42.2077 38.6572 43.0387 39.2236 43.8267C39.2473 43.8601 39.2898 43.8743 39.3289 43.8624C41.7802 43.1041 44.2658 41.9601 46.8318 40.0757C46.8543 40.0591 46.8685 40.0341 46.8708 40.0067C47.4964 33.5355 45.8231 27.9143 42.4353 22.9312C42.427 22.9146 42.4128 22.9027 42.3963 22.8955Z"/></svg>
@@ -33,8 +34,35 @@
           <svg viewBox="23 23 64 64" width="24" height="24"><path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z"/></svg>
         </a>
       </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/" onclick="toggleMenu()">Games</a>
+    <a href="/blog" onclick="toggleMenu()">Blog</a>
+    <a href="/contact" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-social">
+      <a href="https://discord.gg/ahKpvjDkR9" target="_blank">Discord</a>
+      <a href="https://www.youtube.com/channel/UCSSQYKsUfZ2I-GhgMQteCrQ" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/jalice_interactive/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  }
+</script>
 
   <main>
     {{ content }}
