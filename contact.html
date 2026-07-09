@@ -9,8 +9,8 @@ title: Contact Us
 </section>
 
 <section class="contact-form-section">
-  <form class="contact-form" action="https://formspree.io/f/xgobgbql" method="POST" data-next="/thanks">
-    
+  <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgobgbql" method="POST">
+
     <div class="form-group">
       <label for="name">Name *</label>
       <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -26,8 +26,35 @@ title: Contact Us
       <textarea id="message" name="message" placeholder="Your message" rows="6"></textarea>
     </div>
 
-    <input type="hidden" name="_next" value="https://jaliceinteractivehq.github.io/thanks">
     <button type="submit">Send Message</button>
+    <p class="contact-error" id="contactError" style="display:none; color:#c0392b; margin-top:0.75rem;">
+      Something went wrong sending your message. Please try again, or email us directly.
+    </p>
 
   </form>
 </section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const errorMsg = document.getElementById('contactError');
+    errorMsg.style.display = 'none';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        window.location.href = '/thanks';
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    } catch (err) {
+      errorMsg.style.display = 'block';
+    }
+  });
+</script>
