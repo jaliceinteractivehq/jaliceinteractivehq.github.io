@@ -32,7 +32,6 @@ collections:
     permalink: /games/:name
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
