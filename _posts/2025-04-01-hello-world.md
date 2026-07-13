@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World!"
-date: 2025-08-14 00:00:00 +0000
+date: 2025-04-01 00:00:00 +0000
 image: /assets/images/hello-world.png
 preview_image: /assets/images/hello-world.png
 ---
